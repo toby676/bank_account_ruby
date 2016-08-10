@@ -1,8 +1,8 @@
 describe Printer do
 
-  let(:transaction1) {Transaction.new(1000, 0, Time.new(2012, 01, 10))}
-  let(:transaction2) {Transaction.new(2000, 1000, Time.new(2012, 01, 13))}
-  let(:transaction3) {Transaction.new(-500, 3000, Time.new(2012, 01, 14))}
+  let(:transaction1) {double :transaction1, amount: 1000, balance: 1000, date: Time.new(2012, 01, 10)}
+  let(:transaction2) {double :transaction2, amount: 2000, balance: 3000, date: Time.new(2012, 01, 13)}
+  let(:transaction3) {double :transaction3, amount: -500, balance: 2500, date: Time.new(2012, 01, 14)}
   let(:account_history) {[transaction1, transaction2, transaction3]}
   let(:printer) {described_class.new(account_history)}
 
