@@ -21,7 +21,7 @@ class Account
   end
 
   def print_statement
-    @printer_class.new(@account_history.history).print_statement
+    print @printer_class.new(@account_history.history).print_statement
   end
 
 end

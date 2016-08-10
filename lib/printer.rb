@@ -7,7 +7,7 @@ class Printer
 
   def print_statement
     format_statement
-    print @string
+    @string
   end
 
   private
