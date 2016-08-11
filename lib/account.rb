@@ -16,7 +16,7 @@ class Account
   end
 
   def withdraw(amount, balance = @balance)
-    amount = amount * -1
+    amount = -amount
     @balance = @account_history.new_transaction(amount, balance)
   end
 
