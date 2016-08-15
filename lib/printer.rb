@@ -11,11 +11,13 @@ class Printer
   end
 
   private
+
   def format_line(transaction)
     "#{transaction.date.strftime('%d/%m/%Y')} || " +
     (transaction.amount < 0 ? "|| #{'%.2f' % -transaction.amount} || " : "#{'%.2f' % transaction.amount} || || ") +
     "#{'%.2f' % transaction.balance}\n"
   end
+
   def prepare_statement
     @account_history.reverse.each do |transaction|
       @string << format_line(transaction)
